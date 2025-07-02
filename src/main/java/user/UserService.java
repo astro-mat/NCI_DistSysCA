@@ -23,11 +23,12 @@ public class UserService extends SmartAttendanceMonitorImplBase{
 		// basic test validation
 		if(studentId.equals(location)) {
 			// return success message
-			response.setResponseCode(0).setResponsemessage("SUCCESS")
+
+			response.setStatus(location).setStatus("Attendance recorded successfully");
 		}
 		else {
 			// return failure message
-			response.setResponseCode(100).setResponsemessage("INVALID")
+			response.setStatus(location).setStatus("Attendance not recorded");
 		}
 		
 		

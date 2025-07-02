@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_package = "com.eLearningSystem";
+
+service SmartAttendanceMonitor{	
+	rpc recordAttendance(AttendanceRequest) returns(AttendanceResponse);
+	rpc GetAttendanceSummary(SummaryRequest) returns (SummaryResponse);
+}
+
+message AttendanceRequest{
+	string studentId = 1;
+  	string timeStamp = 2;
+  	string location = 3;
+}
+
+message AttendanceResponse{
+	string status = 1;
+}
+
+message SummaryRequest{
+	string studentId = 1;
+}
+
+message SummaryResponse{
+	int sessionsTotal = 1;
+  	int sessionsAttended = 2;
+  	float attendanceRate = 3;
+}

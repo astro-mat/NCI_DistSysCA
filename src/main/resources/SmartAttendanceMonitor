@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "com.NCI_DistSysCA";
+option java_package = "com.eLearningSystem";
 
 service SmartAttendanceMonitor{	
 	rpc recordAttendance(AttendanceRequest) returns(AttendanceResponse);

@@ -22,7 +22,7 @@ message SummaryRequest{
 }
 
 message SummaryResponse{
-	int sessionsTotal = 1;
-  	int sessionsAttended = 2;
+	int32 sessionsTotal = 1;
+  	int32 sessionsAttended = 2;
   	float attendanceRate = 3;
 }

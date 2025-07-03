@@ -8,7 +8,7 @@ import com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse;
 
 import io.grpc.stub.StreamObserver;
 
-public class UserService extends SmartAttendanceMonitorImplBase{
+public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBase{
 
 	@Override
 	public void recordAttendance(AttendanceRequest request, StreamObserver<AttendanceResponse> responseObserver) {
@@ -20,15 +20,15 @@ public class UserService extends SmartAttendanceMonitorImplBase{
 		
 		AttendanceResponse.Builder response = AttendanceResponse.newBuilder();
 		
-		// basic test validation
-		if(studentId.equals(location)) {
+		// test validation to see if required fields are empty
+		if(!studentId.isEmpty() && !timeStamp.isEmpty() && !location.isEmpty()) {
 			// return success message
 
-			response.setStatus(location).setStatus("Attendance recorded successfully");
+			response.setStatus("Attendance recorded successfully");
 		}
 		else {
 			// return failure message
-			response.setStatus(location).setStatus("Attendance not recorded");
+			response.setStatus("Attendance not recorded - Missing Fields");
 		}
 		
 		

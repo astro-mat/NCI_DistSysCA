@@ -1,4 +1,4 @@
-package com.eLearningSystem;
+package com.eLearningSystem.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -27,30 +27,30 @@ public final class SmartAttendanceMonitorGrpc {
   public static final String SERVICE_NAME = "SmartAttendanceMonitor";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest,
-      com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse> getRecordAttendanceMethod;
+  private static volatile io.grpc.MethodDescriptor<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest,
+      com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse> getRecordAttendanceMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "recordAttendance",
-      requestType = com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest.class,
-      responseType = com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse.class,
+      requestType = com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest.class,
+      responseType = com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest,
-      com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse> getRecordAttendanceMethod() {
-    io.grpc.MethodDescriptor<com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest, com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse> getRecordAttendanceMethod;
+  public static io.grpc.MethodDescriptor<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest,
+      com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse> getRecordAttendanceMethod() {
+    io.grpc.MethodDescriptor<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest, com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse> getRecordAttendanceMethod;
     if ((getRecordAttendanceMethod = SmartAttendanceMonitorGrpc.getRecordAttendanceMethod) == null) {
       synchronized (SmartAttendanceMonitorGrpc.class) {
         if ((getRecordAttendanceMethod = SmartAttendanceMonitorGrpc.getRecordAttendanceMethod) == null) {
           SmartAttendanceMonitorGrpc.getRecordAttendanceMethod = getRecordAttendanceMethod = 
-              io.grpc.MethodDescriptor.<com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest, com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest, com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "SmartAttendanceMonitor", "recordAttendance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest.getDefaultInstance()))
+                  com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse.getDefaultInstance()))
+                  com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new SmartAttendanceMonitorMethodDescriptorSupplier("recordAttendance"))
                   .build();
           }
@@ -59,30 +59,30 @@ public final class SmartAttendanceMonitorGrpc {
      return getRecordAttendanceMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest,
-      com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse> getGetAttendanceSummaryMethod;
+  private static volatile io.grpc.MethodDescriptor<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest,
+      com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse> getGetAttendanceSummaryMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetAttendanceSummary",
-      requestType = com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest.class,
-      responseType = com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse.class,
+      requestType = com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest.class,
+      responseType = com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest,
-      com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse> getGetAttendanceSummaryMethod() {
-    io.grpc.MethodDescriptor<com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest, com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse> getGetAttendanceSummaryMethod;
+  public static io.grpc.MethodDescriptor<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest,
+      com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse> getGetAttendanceSummaryMethod() {
+    io.grpc.MethodDescriptor<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest, com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse> getGetAttendanceSummaryMethod;
     if ((getGetAttendanceSummaryMethod = SmartAttendanceMonitorGrpc.getGetAttendanceSummaryMethod) == null) {
       synchronized (SmartAttendanceMonitorGrpc.class) {
         if ((getGetAttendanceSummaryMethod = SmartAttendanceMonitorGrpc.getGetAttendanceSummaryMethod) == null) {
           SmartAttendanceMonitorGrpc.getGetAttendanceSummaryMethod = getGetAttendanceSummaryMethod = 
-              io.grpc.MethodDescriptor.<com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest, com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest, com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "SmartAttendanceMonitor", "GetAttendanceSummary"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest.getDefaultInstance()))
+                  com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse.getDefaultInstance()))
+                  com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new SmartAttendanceMonitorMethodDescriptorSupplier("GetAttendanceSummary"))
                   .build();
           }
@@ -120,15 +120,15 @@ public final class SmartAttendanceMonitorGrpc {
 
     /**
      */
-    public void recordAttendance(com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest request,
-        io.grpc.stub.StreamObserver<com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse> responseObserver) {
+    public void recordAttendance(com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest request,
+        io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getRecordAttendanceMethod(), responseObserver);
     }
 
     /**
      */
-    public void getAttendanceSummary(com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest request,
-        io.grpc.stub.StreamObserver<com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse> responseObserver) {
+    public void getAttendanceSummary(com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest request,
+        io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetAttendanceSummaryMethod(), responseObserver);
     }
 
@@ -138,15 +138,15 @@ public final class SmartAttendanceMonitorGrpc {
             getRecordAttendanceMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest,
-                com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse>(
+                com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest,
+                com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse>(
                   this, METHODID_RECORD_ATTENDANCE)))
           .addMethod(
             getGetAttendanceSummaryMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest,
-                com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse>(
+                com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest,
+                com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse>(
                   this, METHODID_GET_ATTENDANCE_SUMMARY)))
           .build();
     }
@@ -172,16 +172,16 @@ public final class SmartAttendanceMonitorGrpc {
 
     /**
      */
-    public void recordAttendance(com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest request,
-        io.grpc.stub.StreamObserver<com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse> responseObserver) {
+    public void recordAttendance(com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest request,
+        io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getRecordAttendanceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getAttendanceSummary(com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest request,
-        io.grpc.stub.StreamObserver<com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse> responseObserver) {
+    public void getAttendanceSummary(com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest request,
+        io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetAttendanceSummaryMethod(), getCallOptions()), request, responseObserver);
     }
@@ -207,14 +207,14 @@ public final class SmartAttendanceMonitorGrpc {
 
     /**
      */
-    public com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse recordAttendance(com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest request) {
+    public com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse recordAttendance(com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest request) {
       return blockingUnaryCall(
           getChannel(), getRecordAttendanceMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse getAttendanceSummary(com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest request) {
+    public com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse getAttendanceSummary(com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetAttendanceSummaryMethod(), getCallOptions(), request);
     }
@@ -240,16 +240,16 @@ public final class SmartAttendanceMonitorGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse> recordAttendance(
-        com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse> recordAttendance(
+        com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getRecordAttendanceMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse> getAttendanceSummary(
-        com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse> getAttendanceSummary(
+        com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetAttendanceSummaryMethod(), getCallOptions()), request);
     }
@@ -276,12 +276,12 @@ public final class SmartAttendanceMonitorGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_RECORD_ATTENDANCE:
-          serviceImpl.recordAttendance((com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest) request,
-              (io.grpc.stub.StreamObserver<com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse>) responseObserver);
+          serviceImpl.recordAttendance((com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest) request,
+              (io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse>) responseObserver);
           break;
         case METHODID_GET_ATTENDANCE_SUMMARY:
-          serviceImpl.getAttendanceSummary((com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest) request,
-              (io.grpc.stub.StreamObserver<com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse>) responseObserver);
+          serviceImpl.getAttendanceSummary((com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest) request,
+              (io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -305,7 +305,7 @@ public final class SmartAttendanceMonitorGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.eLearningSystem.SmartAttendanceMonitorOuterClass.getDescriptor();
+      return com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.getDescriptor();
     }
 
     @java.lang.Override

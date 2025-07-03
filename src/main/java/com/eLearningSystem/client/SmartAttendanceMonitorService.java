@@ -1,10 +1,10 @@
-package user;
+package com.eLearningSystem.client;
 
-import com.eLearningSystem.SmartAttendanceMonitorGrpc.SmartAttendanceMonitorImplBase;
-import com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceRequest;
-import com.eLearningSystem.SmartAttendanceMonitorOuterClass.AttendanceResponse;
-import com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryRequest;
-import com.eLearningSystem.SmartAttendanceMonitorOuterClass.SummaryResponse;
+import com.eLearningSystem.grpc.SmartAttendanceMonitorGrpc.SmartAttendanceMonitorImplBase;
+import com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest;
+import com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse;
+import com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryRequest;
+import com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse;
 
 import io.grpc.stub.StreamObserver;
 

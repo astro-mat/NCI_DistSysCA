@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "com.eLearningSystem";
+option java_package = "com.eLearningSystem.grpc";
 
 service SmartAttendanceMonitor{	
 	rpc recordAttendance(AttendanceRequest) returns(AttendanceResponse);

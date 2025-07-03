@@ -1,6 +1,8 @@
-package user;
+package com.eLearningSystem.server;
 
 import java.io.IOException;
+
+import com.eLearningSystem.client.SmartAttendanceMonitorService;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;

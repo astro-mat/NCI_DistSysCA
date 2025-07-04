@@ -3,8 +3,8 @@ syntax = "proto3";
 option java_package = "com.eLearningSystem.grpc";
 
 service LearningEnvironmentMonitor {	
-	rpc GetRoomConditions(RoomConditionsRequest) returns RoomConditionsResponse;
-	rpc SetThresholds(ThresholdRequest) returns ThresholdResponse;
+	rpc GetRoomConditions(RoomConditionsRequest) returns (RoomConditionsResponse);
+	rpc SetThresholds(ThresholdRequest) returns (ThresholdResponse);
 }
 
 message RoomConditionsRequest{

@@ -31,7 +31,7 @@ public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBas
 			response.setStatus("Attendance not recorded - Missing Fields");
 		}
 		
-		
+		// send the response
 		responseObserver.onNext(response.build());
 		responseObserver.onCompleted();
 		
@@ -39,7 +39,7 @@ public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBas
 
 	@Override
 	public void getAttendanceSummary(SummaryRequest request, StreamObserver<SummaryResponse> responseObserver) {
-		System.out.println("Inside getAttendance");
+		System.out.println("Inside getAttendanceSummary");
 		
 		String studentId = request.getStudentId();
 		
@@ -63,7 +63,10 @@ public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBas
 	        System.out.println("Attendance summary not provided - Missing studentId");
 	    }
 
+		// send response to client
 	    responseObserver.onNext(response.build());
+	    
+	    // complete
 	    responseObserver.onCompleted();
 	}
 

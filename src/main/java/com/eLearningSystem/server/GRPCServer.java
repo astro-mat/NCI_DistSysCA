@@ -15,6 +15,8 @@ public class GRPCServer {
 		
 		Server server = ServerBuilder.forPort(9090).addService(new SmartAttendanceMonitorService()).build();
 		
+		System.out.println("Starting server on port " + server.getPort() );
+		
 		server.start();
 		
 		System.out.println("Server started at " + server.getPort());

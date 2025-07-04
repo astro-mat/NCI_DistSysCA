@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_package = "com.eLearningSystem.grpc";
+
+service LearningEnvironmentMonitor {	
+	rpc GetRoomConditions(RoomConditionsRequest) returns RoomConditionsResponse;
+	rpc SetThresholds(ThresholdRequest) returns ThresholdResponse;
+}
+
+message RoomConditionsRequest{
+	string location = 1;
+
+}
+
+message RoomConditionsResponse{
+	float temperature = 1;
+	float humidity = 2;
+	float co2Level = 3;
+	float airQuality = 4;
+
+}
+
+message ThresholdRequest{
+	string location = 1;
+	float temperatureMin = 2;
+	float humidityMax = 3;
+	float co2Threshold = 4;
+}
+
+message ThresholdResponse{
+	string message = 1;
+}

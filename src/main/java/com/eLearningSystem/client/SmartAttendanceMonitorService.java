@@ -47,7 +47,7 @@ public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBas
 		
 		// test validation to see if studentId is provided
 		if (!studentId.isEmpty()) {
-	        // Simulated test values
+	        // Test values
 	        int totalSessions = 10;
 	        int attendedSessions = 7;
 	        float attendanceRate = ((float) attendedSessions / totalSessions) * 100;

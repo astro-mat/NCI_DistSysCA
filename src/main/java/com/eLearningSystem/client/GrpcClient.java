@@ -25,6 +25,7 @@ public class GrpcClient {
 		// call the api's
 		AttendanceResponse response = SmartAttendanceMonitorStub.recordAttendance(attendancerequest);
 		
+		// print the response
 		System.out.println(response.getStatus());
 	}
 

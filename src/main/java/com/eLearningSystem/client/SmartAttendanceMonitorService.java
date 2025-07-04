@@ -39,7 +39,32 @@ public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBas
 
 	@Override
 	public void getAttendanceSummary(SummaryRequest request, StreamObserver<SummaryResponse> responseObserver) {
+		System.out.println("Inside getAttendance");
+		
+		String studentId = request.getStudentId();
+		
+		SummaryResponse.Builder response = SummaryResponse.newBuilder();
+		
+		// test validation to see if studentId is provided
+		if (!studentId.isEmpty()) {
+	        // Simulated test values
+	        int totalSessions = 10;
+	        int attendedSessions = 7;
+	        float attendanceRate = ((float) attendedSessions / totalSessions) * 100;
 
+	        response.setSessionsTotal(totalSessions);
+	        response.setSessionsAttended(attendedSessions);
+	        response.setAttendanceRate(attendanceRate);
+	    } else {
+	        // If studentId is missing, set default values
+	        response.setSessionsTotal(0);
+	        response.setSessionsAttended(0);
+	        response.setAttendanceRate(0);
+	        System.out.println("Attendance summary not provided - Missing studentId");
+	    }
+
+	    responseObserver.onNext(response.build());
+	    responseObserver.onCompleted();
 	}
 
 	

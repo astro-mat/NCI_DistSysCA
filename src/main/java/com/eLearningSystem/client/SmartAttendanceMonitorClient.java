@@ -5,10 +5,10 @@ import com.eLearningSystem.grpc.SmartAttendanceMonitorGrpc.SmartAttendanceMonito
 import com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest;
 import com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceResponse;
 
-import io.grpc.ManagedChannelBuilder;
 import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
 
-public class GrpcClient {
+public class SmartAttendanceMonitorClient {
 	// main method
 	public static void main(String[] args) {
 		
@@ -28,5 +28,4 @@ public class GrpcClient {
 		// print the response
 		System.out.println(response.getStatus());
 	}
-
 }

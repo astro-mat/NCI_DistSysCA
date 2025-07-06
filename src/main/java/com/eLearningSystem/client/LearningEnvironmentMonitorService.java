@@ -15,15 +15,34 @@ public class LearningEnvironmentMonitorService extends LearningEnvironmentMonito
 
 		System.out.println("Inside getRoomConditions");
 		
-		string location = request.getLocation();
+		String location = request.getLocation();
+		
+		// Create Response builder
+		RoomConditionsResponse.Builder response = RoomConditionsResponse.newBuilder();
+		
+		// Validation to check that location is provided
+        if (location == null || location.isEmpty()) {
+            // Return default/error values
+            response.setTemperature(0);
+            response.setHumidity(0);
+            response.setCo2Level(0);
+            response.setAirQuality(0);
+
+            System.out.println("Invalid input: location is required.");
+        } else {
+
+            // dummy values:
+            response.setTemperature(22.5f);
+            response.setHumidity(45.0f);
+            response.setCo2Level(400.0f);
+            response.setAirQuality(0.8f);
+        }
 		
 		
 		
-//		float temperature = 1;
-//		float humidity = 2;
-//		float co2Level = 3;
-//		float airQuality = 4;
-		
+        // send the response
+        responseObserver.onNext(response.build());
+        responseObserver.onCompleted();
 	}
 
 	@Override
@@ -31,54 +50,34 @@ public class LearningEnvironmentMonitorService extends LearningEnvironmentMonito
 
 		System.out.println("Inside setThresholds");
 		
-		string location = request.getLocation();
+		String location = request.getLocation();
 		float temperatureMin = request.getTemperatureMin();
 		float humidityMax = request.getHumidityMax();
 		float co2Threshold = request.getCo2Threshold();
 		
+		// Response Builder
+		ThresholdResponse.Builder response = ThresholdResponse.newBuilder();
+		
+		// Validation
+        if (location == null || location.isEmpty()) {
+            response.setMessage("Invalid input: location is required.");
+        } else if (temperatureMin < -50 || temperatureMin > 50) {
+            response.setMessage("Invalid input: temperatureMin must be between -50 and 50 degrees.");
+        } else if (humidityMax < 0 || humidityMax > 100) {
+            response.setMessage("Invalid input: humidityMax must be between 0 and 100 percent.");
+        } else if (co2Threshold < 0) {
+            response.setMessage("Invalid input: co2Threshold must be non-negative.");
+        } else {
+            // Assume thresholds are saved successfully
+            response.setMessage("Thresholds set successfully for location: " + location);
+        }
 		
 		
-		
-//		string message = 1;
-		
-		
+        // send the response
+        responseObserver.onNext(response.build());
+        responseObserver.onCompleted();
 	}
 	
 	
 
 }
-
-
-
-
-
-
-
-//service LearningEnvironmentMonitor {	
-//	rpc GetRoomConditions(RoomConditionsRequest) returns (RoomConditionsResponse);
-//	rpc SetThresholds(ThresholdRequest) returns (ThresholdResponse);
-//}
-//
-//message RoomConditionsRequest{
-//	string location = 1;
-//
-//}
-//
-//message RoomConditionsResponse{
-//	float temperature = 1;
-//	float humidity = 2;
-//	float co2Level = 3;
-//	float airQuality = 4;
-//
-//}
-//
-//message ThresholdRequest{
-//	string location = 1;
-//	float temperatureMin = 2;
-//	float humidityMax = 3;
-//	float co2Threshold = 4;
-//}
-//
-//message ThresholdResponse{
-//	string message = 1;
-//}

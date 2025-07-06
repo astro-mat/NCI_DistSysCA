@@ -17,6 +17,7 @@ public class GRPCServer {
 		Server server = ServerBuilder.forPort(9090)
 				.addService(new SmartAttendanceMonitorService())
 				.addService(new StudentLearningAssistantService())
+				.addService(LearningEnvironmentMonitorService)
 				.build();
 		
 		server.start();

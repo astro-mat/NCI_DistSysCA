@@ -20,7 +20,7 @@ public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBas
 		
 		AttendanceResponse.Builder response = AttendanceResponse.newBuilder();
 		
-		// test validation to see if required fields are empty
+		// validation to see if required fields are empty
 		if(!studentId.isEmpty() && !timeStamp.isEmpty() && !location.isEmpty()) {
 			// return success message
 
@@ -45,7 +45,7 @@ public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBas
 		
 		SummaryResponse.Builder response = SummaryResponse.newBuilder();
 		
-		// test validation to see if studentId is provided
+		// validation to see if studentId is provided
 		if (!studentId.isEmpty()) {
 	        // Test values
 	        int totalSessions = 10;

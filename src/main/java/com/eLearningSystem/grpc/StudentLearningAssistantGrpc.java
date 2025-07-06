@@ -63,7 +63,7 @@ public final class StudentLearningAssistantGrpc {
       com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse> getSubmitAssessmentMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SubmitAssessment",
+      fullMethodName = SERVICE_NAME + '/' + "submitAssessment",
       requestType = com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest.class,
       responseType = com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
@@ -77,13 +77,13 @@ public final class StudentLearningAssistantGrpc {
               io.grpc.MethodDescriptor.<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest, com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "StudentLearningAssistant", "SubmitAssessment"))
+                  "StudentLearningAssistant", "submitAssessment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new StudentLearningAssistantMethodDescriptorSupplier("SubmitAssessment"))
+                  .setSchemaDescriptor(new StudentLearningAssistantMethodDescriptorSupplier("submitAssessment"))
                   .build();
           }
         }

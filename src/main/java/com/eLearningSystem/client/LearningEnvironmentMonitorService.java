@@ -1,5 +1,5 @@
-package com.eLearningSystem.client;
-
-public class LearningEnvironmentMonitorService {
-
-}
+//package com.eLearningSystem.client;
+//
+//public class LearningEnvironmentMonitorService extends {
+//
+//}

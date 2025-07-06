@@ -3,6 +3,7 @@ package com.eLearningSystem.server;
 import java.io.IOException;
 
 import com.eLearningSystem.client.SmartAttendanceMonitorService;
+import com.eLearningSystem.client.StudentLearningAssistantService;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -13,7 +14,10 @@ public class GRPCServer {
 		
 		
 		
-		Server server = ServerBuilder.forPort(9090).addService(new SmartAttendanceMonitorService()).build();
+		Server server = ServerBuilder.forPort(9090)
+				.addService(new SmartAttendanceMonitorService())
+				.addService(new StudentLearningAssistantService())
+				.build();
 		
 		server.start();
 		

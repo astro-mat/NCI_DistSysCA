@@ -4,7 +4,7 @@ option java_package = "com.eLearningSystem.grpc";
 
 service StudentLearningAssistant {	
 	rpc getLearningRecommendation(RecommendationRequest) returns (RecommendationResponse);
-	rpc SubmitAssessment(AssessmentRequest) returns (AssessmentResponse);
+	rpc submitAssessment(AssessmentRequest) returns (AssessmentResponse);
 }
 
 message RecommendationRequest{

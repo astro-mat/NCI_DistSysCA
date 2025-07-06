@@ -2727,7 +2727,7 @@ public final class StudentLearningAssistantOuterClass {
       "feedback\030\003 \001(\t2\245\001\n\030StudentLearningAssist" +
       "ant\022L\n\031getLearningRecommendation\022\026.Recom" +
       "mendationRequest\032\027.RecommendationRespons" +
-      "e\022;\n\020SubmitAssessment\022\022.AssessmentReques" +
+      "e\022;\n\020submitAssessment\022\022.AssessmentReques" +
       "t\032\023.AssessmentResponseB\032\n\030com.eLearningS" +
       "ystem.grpcb\006proto3"
     };

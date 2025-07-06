@@ -21,7 +21,7 @@ public class StudentLearningAssistantService extends StudentLearningAssistantImp
 		
 		RecommendationResponse.Builder response = RecommendationResponse.newBuilder();
 		
-		// test validation 
+		// validation 
 
         //  validation to check if studentId is included
         if (studentId == null || studentId.isEmpty()) {
@@ -76,6 +76,7 @@ public class StudentLearningAssistantService extends StudentLearningAssistantImp
             response.setFeedback("Assessment submitted successfully.");
         }
 
+        // send the response
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
 

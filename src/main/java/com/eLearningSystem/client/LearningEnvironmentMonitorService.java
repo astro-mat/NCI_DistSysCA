@@ -75,6 +75,7 @@ public class LearningEnvironmentMonitorService extends LearningEnvironmentMonito
 		
         // send the response
         responseObserver.onNext(response.build());
+        // close the call
         responseObserver.onCompleted();
 	}
 	

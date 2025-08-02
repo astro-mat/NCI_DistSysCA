@@ -8,8 +8,37 @@ import com.eLearningSystem.grpc.LearningEnvironmentMonitorOuterClass.ThresholdRe
 
 import io.grpc.stub.StreamObserver;
 
+import javax.jmdns.JmDNS;
+import javax.jmdns.ServiceInfo;
+import java.io.IOException;
+import java.net.InetAddress;
+
+
 public class LearningEnvironmentMonitorService extends LearningEnvironmentMonitorImplBase {
 
+	public LearningEnvironmentMonitorService() {
+	    try {
+	        // Create a jmDNS instance
+	        JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+
+	        // Register the service with jmDNS
+	        ServiceInfo serviceInfo = ServiceInfo.create(
+	            "_environmentmonitor._tcp.local.",   // Service type
+	            "LearningEnvironmentMonitorService", // Service name
+	            9090,                                 // Port
+	            "path=environment.html"              // Optional description
+	        );
+
+	        jmdns.registerService(serviceInfo);
+	        System.out.println("LearningEnvironmentMonitorService registered with jmDNS");
+
+	    } catch (IOException e) {
+	        System.out.println("Failed to register LearningEnvironmentMonitorService with jmDNS");
+	        e.printStackTrace();
+	    }
+	}
+
+	
 	@Override
 	public void getRoomConditions(RoomConditionsRequest request,StreamObserver<RoomConditionsResponse> responseObserver) {
 

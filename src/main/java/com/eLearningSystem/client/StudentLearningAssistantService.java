@@ -8,8 +8,36 @@ import com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.Recommendatio
 
 import io.grpc.stub.StreamObserver;
 
+import javax.jmdns.JmDNS;
+import javax.jmdns.ServiceInfo;
+import java.io.IOException;
+import java.net.InetAddress;
+
 public class StudentLearningAssistantService extends StudentLearningAssistantImplBase{
 
+	public StudentLearningAssistantService() {
+	    try {
+	        // Create a jmDNS instance
+	        JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+
+	        // Register the service with a type, name, port, and description
+	        ServiceInfo serviceInfo = ServiceInfo.create(
+	            "_learningassistant._tcp.local.",   // Service type
+	            "StudentLearningAssistantService",  // Service name
+	            9090,                                // Port (same as your gRPC server)
+	            "path=index.html"                   // Optional description
+	        );
+
+	        jmdns.registerService(serviceInfo);
+	        System.out.println("StudentLearningAssistantService registered with jmDNS");
+
+	    } catch (IOException e) {
+	        System.out.println("Failed to register StudentLearningAssistantService with jmDNS");
+	        e.printStackTrace();
+	    }
+	}
+
+	
 	@Override
 	public void getLearningRecommendation(RecommendationRequest request, StreamObserver<RecommendationResponse> responseObserver) {
 		

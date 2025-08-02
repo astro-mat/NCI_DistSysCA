@@ -37,7 +37,6 @@ public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBas
 	}
 
 	
-	
 	@Override
 	public void recordAttendance(AttendanceRequest request, StreamObserver<AttendanceResponse> responseObserver) {
 		System.out.println("Inside recordAttendance");

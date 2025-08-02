@@ -8,8 +8,36 @@ import com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.SummaryResponse
 
 import io.grpc.stub.StreamObserver;
 
+import javax.jmdns.JmDNS;
+import javax.jmdns.ServiceInfo;
+import java.io.IOException;
+import java.net.InetAddress;
+
 public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBase{
 
+	public SmartAttendanceMonitorService() {
+	    try {
+	        // Create a JmDNS instance on the local host
+	        JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+
+	        // Register the SmartAttendance service
+	        ServiceInfo serviceInfo = ServiceInfo.create(
+	            "_smartattendance._tcp.local.", // service type
+	            "SmartAttendanceService",       // service name
+	            9090,                           // port (same as your gRPC server)
+	            "gRPC Smart Attendance Monitor" // description
+	        );
+
+	        jmdns.registerService(serviceInfo);
+	        System.out.println("SmartAttendanceMonitorService registered with jmDNS");
+	    } catch (IOException e) {
+	        System.out.println("Error registering SmartAttendanceMonitorService with jmDNS: " + e.getMessage());
+	        e.printStackTrace();
+	    }
+	}
+
+	
+	
 	@Override
 	public void recordAttendance(AttendanceRequest request, StreamObserver<AttendanceResponse> responseObserver) {
 		System.out.println("Inside recordAttendance");

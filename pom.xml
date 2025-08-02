@@ -27,12 +27,18 @@
 			<artifactId>grpc-stub</artifactId>
 			<version>1.15.1</version>
 		</dependency>
+		<!-- Dependancy added to fix error -->
 		<dependency>
   			<groupId>javax.annotation</groupId>
   			<artifactId>javax.annotation-api</artifactId>
   			<version>1.3.2</version>
 		</dependency>
-
+		<!-- Dependancy added to implement jmDNS --> 
+		<dependency>
+    		<groupId>org.jmdns</groupId>
+    		<artifactId>jmdns</artifactId>
+    		<version>3.5.5</version>
+		</dependency>
 	</dependencies>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

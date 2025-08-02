@@ -16,6 +16,8 @@ import java.net.InetAddress;
 public class StudentLearningAssistantService extends StudentLearningAssistantImplBase{
 
 	public StudentLearningAssistantService() {
+		System.out.println("StudentLearningAssistantService constructor called");
+		
 	    try {
 	        // Create a jmDNS instance
 	        JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());

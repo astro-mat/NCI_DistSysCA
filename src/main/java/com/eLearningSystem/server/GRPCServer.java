@@ -9,6 +9,10 @@ import com.eLearningSystem.client.LearningEnvironmentMonitorService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
+import javax.jmdns.JmDNS;
+import javax.jmdns.ServiceInfo;
+import java.net.InetAddress;
+
 public class GRPCServer {
 	
 	public static void main(String[] args) throws IOException, InterruptedException {
@@ -21,7 +25,23 @@ public class GRPCServer {
 				.addService(new LearningEnvironmentMonitorService())
 				.build();
 		
+		// Starts the server
 		server.start();
+		
+		
+		JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+		
+		// Register each service with a unique name and port
+		ServiceInfo attendanceServiceInfo = ServiceInfo.create("_grpc._tcp.local.", "SmartAttendanceMonitor", 9090, "gRPC Smart Attendance Service");
+		jmdns.registerService(attendanceServiceInfo);
+
+		ServiceInfo learningEnvServiceInfo = ServiceInfo.create("_grpc._tcp.local.", "LearningEnvironmentMonitor", 9090, "gRPC Environment Monitor Service");
+		jmdns.registerService(learningEnvServiceInfo);
+
+		ServiceInfo assistantServiceInfo = ServiceInfo.create("_grpc._tcp.local.", "StudentLearningAssistant", 9090, "gRPC Learning Assistant Service");
+		jmdns.registerService(assistantServiceInfo);
+
+		System.out.println("Services registered with jmDNS");
 		
 		System.out.println("Server started at " + server.getPort());
 		

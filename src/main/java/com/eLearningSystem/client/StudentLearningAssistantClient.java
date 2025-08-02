@@ -15,7 +15,7 @@ public class StudentLearningAssistantClient {
 		ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9090).usePlaintext().build();
 		
 		// stubs - generate from proto file
-		StudentLearningAssistantBlockingStub studentLearningAssistantStub = StudentLearningAssistantGrpc.newBlockingStub(channel)
+		StudentLearningAssistantBlockingStub studentLearningAssistantStub = StudentLearningAssistantGrpc.newBlockingStub(channel);
 
 		
 	}

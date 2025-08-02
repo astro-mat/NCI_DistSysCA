@@ -13,7 +13,7 @@ public class LearningEnvironmentMonitorClient {
 		ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9090).usePlaintext().build();
 		
 		// stubs - generate from proto file
-		LearningEnvironmentMonitorBlockingStub LearningEnvironmentMonitorStub = LearningEnvironmentMonitorGrpc.newBlockingStub(channel)
+		LearningEnvironmentMonitorBlockingStub LearningEnvironmentMonitorStub = LearningEnvironmentMonitorGrpc.newBlockingStub(channel);
 				
 
 		

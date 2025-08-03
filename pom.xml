@@ -6,39 +6,39 @@
   <name>eLearningSystem</name>
   
   <dependencies>
-	<dependency>
-			<groupId>com.google.protobuf</groupId>
-			<artifactId>protobuf-java</artifactId>
-			<version>3.6.1</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>io.grpc</groupId>
-			<artifactId>grpc-netty-shaded</artifactId>
-			<version>1.15.1</version>
-		</dependency>
-		<dependency>
-			<groupId>io.grpc</groupId>
-			<artifactId>grpc-protobuf</artifactId>
-			<version>1.15.1</version>
-		</dependency>
-		<dependency>
-			<groupId>io.grpc</groupId>
-			<artifactId>grpc-stub</artifactId>
-			<version>1.15.1</version>
-		</dependency>
-		<!-- Dependancy added to fix error -->
-		<dependency>
-  			<groupId>javax.annotation</groupId>
-  			<artifactId>javax.annotation-api</artifactId>
-  			<version>1.3.2</version>
-		</dependency>
-		<!-- Dependancy added to implement jmDNS --> 
-		<dependency>
-    		<groupId>org.jmdns</groupId>
-    		<artifactId>jmdns</artifactId>
-    		<version>3.5.5</version>
-		</dependency>
+  	
+  	  <!-- gRPC and Protobuf dependencies -->
+	  <!-- gRPC and Protobuf dependencies -->
+	  <dependency>
+	    <groupId>io.grpc</groupId>
+	    <artifactId>grpc-netty-shaded</artifactId>
+	    <version>1.60.1</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>io.grpc</groupId>
+	    <artifactId>grpc-protobuf</artifactId>
+	    <version>1.60.1</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>io.grpc</groupId>
+	    <artifactId>grpc-stub</artifactId>
+	    <version>1.60.1</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>com.google.protobuf</groupId>
+	    <artifactId>protobuf-java</artifactId>
+	    <version>3.25.1</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>javax.annotation</groupId>
+	    <artifactId>javax.annotation-api</artifactId>
+	    <version>1.3.2</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>org.jmdns</groupId>
+	    <artifactId>jmdns</artifactId>
+	    <version>3.5.5</version>
+	  </dependency>
 	</dependencies>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -46,6 +46,15 @@
   
   
   	<build>
+  	
+		<extensions>
+    		<extension>
+      			<groupId>kr.motd.maven</groupId>
+      			<artifactId>os-maven-plugin</artifactId>
+      			<version>1.6.2</version>
+    		</extension>
+  		</extensions>
+  		
 		<defaultGoal>clean generate-sources compile install</defaultGoal>
 
 		<plugins>
@@ -93,6 +102,8 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			
+			
 		</plugins>
 	</build>
 </project>

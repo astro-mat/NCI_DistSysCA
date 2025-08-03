@@ -27,38 +27,6 @@ public final class StudentLearningAssistantGrpc {
   public static final String SERVICE_NAME = "StudentLearningAssistant";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest,
-      com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> getGetLearningRecommendationMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getLearningRecommendation",
-      requestType = com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest.class,
-      responseType = com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest,
-      com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> getGetLearningRecommendationMethod() {
-    io.grpc.MethodDescriptor<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest, com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> getGetLearningRecommendationMethod;
-    if ((getGetLearningRecommendationMethod = StudentLearningAssistantGrpc.getGetLearningRecommendationMethod) == null) {
-      synchronized (StudentLearningAssistantGrpc.class) {
-        if ((getGetLearningRecommendationMethod = StudentLearningAssistantGrpc.getGetLearningRecommendationMethod) == null) {
-          StudentLearningAssistantGrpc.getGetLearningRecommendationMethod = getGetLearningRecommendationMethod = 
-              io.grpc.MethodDescriptor.<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest, com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "StudentLearningAssistant", "getLearningRecommendation"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new StudentLearningAssistantMethodDescriptorSupplier("getLearningRecommendation"))
-                  .build();
-          }
-        }
-     }
-     return getGetLearningRecommendationMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest,
       com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse> getSubmitAssessmentMethod;
 
@@ -91,6 +59,38 @@ public final class StudentLearningAssistantGrpc {
      return getSubmitAssessmentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest,
+      com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> getGetLearningRecommendationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getLearningRecommendation",
+      requestType = com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest.class,
+      responseType = com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest,
+      com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> getGetLearningRecommendationMethod() {
+    io.grpc.MethodDescriptor<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest, com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> getGetLearningRecommendationMethod;
+    if ((getGetLearningRecommendationMethod = StudentLearningAssistantGrpc.getGetLearningRecommendationMethod) == null) {
+      synchronized (StudentLearningAssistantGrpc.class) {
+        if ((getGetLearningRecommendationMethod = StudentLearningAssistantGrpc.getGetLearningRecommendationMethod) == null) {
+          StudentLearningAssistantGrpc.getGetLearningRecommendationMethod = getGetLearningRecommendationMethod = 
+              io.grpc.MethodDescriptor.<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest, com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "StudentLearningAssistant", "getLearningRecommendation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new StudentLearningAssistantMethodDescriptorSupplier("getLearningRecommendation"))
+                  .build();
+          }
+        }
+     }
+     return getGetLearningRecommendationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -120,27 +120,20 @@ public final class StudentLearningAssistantGrpc {
 
     /**
      */
-    public void getLearningRecommendation(com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest request,
-        io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetLearningRecommendationMethod(), responseObserver);
-    }
-
-    /**
-     */
     public void submitAssessment(com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest request,
         io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getSubmitAssessmentMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getLearningRecommendation(com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest request,
+        io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetLearningRecommendationMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetLearningRecommendationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest,
-                com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse>(
-                  this, METHODID_GET_LEARNING_RECOMMENDATION)))
           .addMethod(
             getSubmitAssessmentMethod(),
             asyncUnaryCall(
@@ -148,6 +141,13 @@ public final class StudentLearningAssistantGrpc {
                 com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest,
                 com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse>(
                   this, METHODID_SUBMIT_ASSESSMENT)))
+          .addMethod(
+            getGetLearningRecommendationMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest,
+                com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse>(
+                  this, METHODID_GET_LEARNING_RECOMMENDATION)))
           .build();
     }
   }
@@ -172,18 +172,18 @@ public final class StudentLearningAssistantGrpc {
 
     /**
      */
-    public void getLearningRecommendation(com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest request,
-        io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetLearningRecommendationMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
     public void submitAssessment(com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest request,
         io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSubmitAssessmentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getLearningRecommendation(com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest request,
+        io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetLearningRecommendationMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -207,16 +207,16 @@ public final class StudentLearningAssistantGrpc {
 
     /**
      */
-    public com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse getLearningRecommendation(com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest request) {
+    public com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse submitAssessment(com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetLearningRecommendationMethod(), getCallOptions(), request);
+          getChannel(), getSubmitAssessmentMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse submitAssessment(com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest request) {
+    public com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse getLearningRecommendation(com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest request) {
       return blockingUnaryCall(
-          getChannel(), getSubmitAssessmentMethod(), getCallOptions(), request);
+          getChannel(), getGetLearningRecommendationMethod(), getCallOptions(), request);
     }
   }
 
@@ -240,23 +240,23 @@ public final class StudentLearningAssistantGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> getLearningRecommendation(
-        com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetLearningRecommendationMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse> submitAssessment(
         com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSubmitAssessmentMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse> getLearningRecommendation(
+        com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetLearningRecommendationMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_GET_LEARNING_RECOMMENDATION = 0;
-  private static final int METHODID_SUBMIT_ASSESSMENT = 1;
+  private static final int METHODID_SUBMIT_ASSESSMENT = 0;
+  private static final int METHODID_GET_LEARNING_RECOMMENDATION = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -275,13 +275,13 @@ public final class StudentLearningAssistantGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_LEARNING_RECOMMENDATION:
-          serviceImpl.getLearningRecommendation((com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest) request,
-              (io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse>) responseObserver);
-          break;
         case METHODID_SUBMIT_ASSESSMENT:
           serviceImpl.submitAssessment((com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentRequest) request,
               (io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.AssessmentResponse>) responseObserver);
+          break;
+        case METHODID_GET_LEARNING_RECOMMENDATION:
+          serviceImpl.getLearningRecommendation((com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationRequest) request,
+              (io.grpc.stub.StreamObserver<com.eLearningSystem.grpc.StudentLearningAssistantOuterClass.RecommendationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -344,8 +344,8 @@ public final class StudentLearningAssistantGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new StudentLearningAssistantFileDescriptorSupplier())
-              .addMethod(getGetLearningRecommendationMethod())
               .addMethod(getSubmitAssessmentMethod())
+              .addMethod(getGetLearningRecommendationMethod())
               .build();
         }
       }

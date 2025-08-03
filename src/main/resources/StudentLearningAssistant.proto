@@ -2,9 +2,19 @@ syntax = "proto3";
 
 option java_package = "com.eLearningSystem.grpc";
 
-service StudentLearningAssistant {	
+service StudentLearningAssistant {
+	rpc submitAssessment(AssessmentRequest) returns (AssessmentResponse);	
 	rpc getLearningRecommendation(RecommendationRequest) returns (RecommendationResponse);
-	rpc submitAssessment(AssessmentRequest) returns (AssessmentResponse);
+}
+
+message AssessmentRequest{
+	string studentId = 1;
+}
+
+message AssessmentResponse{
+	string studentId = 1;
+  	string assessmentId = 2;
+  	string feedback = 3;
 }
 
 message RecommendationRequest{
@@ -17,12 +27,3 @@ message RecommendationResponse{
 	string recommendedSubject = 1;
 }
 
-message AssessmentRequest{
-	string studentId = 1;
-}
-
-message AssessmentResponse{
-	string studentId = 1;
-  	string assessmentId = 2;
-  	string feedback = 3;
-}

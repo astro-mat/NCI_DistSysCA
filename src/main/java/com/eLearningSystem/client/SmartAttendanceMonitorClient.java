@@ -33,7 +33,7 @@ public class SmartAttendanceMonitorClient {
 		SummaryRequest summaryRequest = SummaryRequest.newBuilder().setStudentId("S0435").build();
 
 		// call the GetAttendanceSummary RPC
-		SummaryResponse summaryResponse = smartAttendanceMonitorStub.getAttendanceSummary(summaryRequest); // <-- ADDED
+		SummaryResponse summaryResponse = smartAttendanceMonitorStub.getAttendanceSummary(summaryRequest);
 
 		// print summary
 		System.out.println("-----SummaryResponse-----");

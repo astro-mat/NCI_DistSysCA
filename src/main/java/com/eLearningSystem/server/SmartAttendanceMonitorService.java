@@ -1,4 +1,4 @@
-package com.eLearningSystem.client;
+package com.eLearningSystem.server;
 
 import com.eLearningSystem.grpc.SmartAttendanceMonitorGrpc.SmartAttendanceMonitorImplBase;
 import com.eLearningSystem.grpc.SmartAttendanceMonitorOuterClass.AttendanceRequest;
@@ -16,6 +16,8 @@ import java.net.InetAddress;
 public class SmartAttendanceMonitorService extends SmartAttendanceMonitorImplBase{
 
 	public SmartAttendanceMonitorService() {
+		System.out.println("SmartAttendanceMonitorService constructor called");
+		
 	    try {
 	        // Create a JmDNS instance on the local host
 	        JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());

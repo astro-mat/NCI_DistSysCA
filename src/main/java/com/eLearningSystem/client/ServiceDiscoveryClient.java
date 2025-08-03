@@ -22,7 +22,7 @@ public class ServiceDiscoveryClient {
 
         System.out.println("Listening for services of type: " + serviceType);
 
-        // Add a service listener that will handle events when services are added, removed, or resolved.
+        // A service listener that will handle events when services are added, removed, or resolved.
         jmdns.addServiceListener(serviceType, new ServiceListener() {
 
             // Called when a service is found but not yet resolved (full details not available yet)

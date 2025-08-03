@@ -1,4 +1,4 @@
-package com.eLearningSystem.server;
+package com.eLearningSystem.client;
 
 
 import com.eLearningSystem.grpc.StudentLearningAssistantGrpc;

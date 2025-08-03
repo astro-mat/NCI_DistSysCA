@@ -1,4 +1,4 @@
-package com.eLearningSystem.client;
+package com.eLearningSystem.server;
 
 import com.eLearningSystem.grpc.LearningEnvironmentMonitorGrpc.LearningEnvironmentMonitorImplBase;
 import com.eLearningSystem.grpc.LearningEnvironmentMonitorOuterClass.RoomConditionsRequest;
@@ -17,6 +17,8 @@ import java.net.InetAddress;
 public class LearningEnvironmentMonitorService extends LearningEnvironmentMonitorImplBase {
 
 	public LearningEnvironmentMonitorService() {
+		System.out.println("LearningEnvironmentMonitorService constructor called");
+		
 	    try {
 	        // Create a jmDNS instance
 	        JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());

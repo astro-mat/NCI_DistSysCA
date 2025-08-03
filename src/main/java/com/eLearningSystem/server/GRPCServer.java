@@ -8,10 +8,6 @@ import io.grpc.ServerBuilder;
 import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceInfo;
 
-import com.eLearningSystem.client.LearningEnvironmentMonitorService;
-import com.eLearningSystem.client.SmartAttendanceMonitorService;
-import com.eLearningSystem.client.StudentLearningAssistantService;
-
 import java.net.InetAddress;
 
 // import com.eLearningSystem.server.SmartAttendanceMonitorService;

@@ -1,4 +1,4 @@
-package com.eLearningSystem.client;
+package com.eLearningSystem.server;
 
 import com.eLearningSystem.grpc.LearningEnvironmentMonitorGrpc;
 import com.eLearningSystem.grpc.LearningEnvironmentMonitorGrpc.LearningEnvironmentMonitorBlockingStub;

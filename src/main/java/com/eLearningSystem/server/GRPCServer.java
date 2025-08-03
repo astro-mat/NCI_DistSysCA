@@ -2,16 +2,21 @@ package com.eLearningSystem.server;
 
 import java.io.IOException;
 
-import com.eLearningSystem.client.SmartAttendanceMonitorService;
-import com.eLearningSystem.client.StudentLearningAssistantService;
-import com.eLearningSystem.client.LearningEnvironmentMonitorService;
-
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
 import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceInfo;
+
+import com.eLearningSystem.client.LearningEnvironmentMonitorService;
+import com.eLearningSystem.client.SmartAttendanceMonitorService;
+import com.eLearningSystem.client.StudentLearningAssistantService;
+
 import java.net.InetAddress;
+
+// import com.eLearningSystem.server.SmartAttendanceMonitorService;
+// import com.eLearningSystem.server.StudentLearningAssistantService;
+// import com.eLearningSystem.server.LearningEnvironmentMonitorService;
 
 public class GRPCServer {
 	
